@@ -6,6 +6,7 @@
   <title>SmartBuy Home Outlet | Appliances & Furniture — Albany, NY</title>
   <meta name="description" content="Albany's best deals on appliances and furniture. Refrigerators, washers, dryers, stoves, dishwashers and more. Open 7 days 10AM-7PM at 137 Central Ave.">
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
 
@@ -294,6 +295,17 @@
       const topSellers = getProductsByCategory('top-sellers').slice(0, 8);
       document.getElementById('topSellersGrid').innerHTML = topSellers.map(productCardHTML).join('');
     });
+  </script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
   </script>
 </body>
 </html>
