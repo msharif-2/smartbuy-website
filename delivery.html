@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Delivery | SmartBuy Home Outlet — Albany, NY</title>
+  <meta name="description" content="SmartBuy Home Outlet delivery info. We deliver appliances and furniture to Albany and surrounding areas. Call (518) 599-0070 for a quote.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Top Info Bar ── -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-item">📍 137 Central Ave, Albany NY 12206</span>
+        <span class="topbar-item topbar-hours">🕐 Open 7 Days · 10AM–7PM</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item">✉ 518smartbuyappliances@gmail.com</a>
+        <a href="tel:5185990070" class="topbar-phone">📞 (518) 599-0070</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Navbar ── -->
+  <nav class="navbar" style="position:sticky;top:0;z-index:1000;">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="SmartBuy Home Outlet" />
+      </a>
+      <div class="nav-search">
+        <input type="text" placeholder="Search appliances, furniture..." />
+        <button aria-label="Search">🔍</button>
+      </div>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <div>
+            <span>Call to Order</span>
+            <strong>(518) 599-0070</strong>
+          </div>
+        </div>
+        <a href="contact.html" class="nav-cta-btn">📩 Contact Us</a>
+      </div>
+      <div class="nav-toggle" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">🏠 Home</a>
+      <a href="shop.html">🛒 Shop All</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Washer-Dryer Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="red-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── Category Nav Bar ── -->
+  <div class="cat-nav">
+    <div class="container">
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?cat=featured">⭐ Featured</a>
+      <a href="shop.html?cat=top-sellers">🔥 Top Sellers</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="sd-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html" class="active">🚚 Delivery</a>
+    </div>
+  </div>
+
+  <!-- ── Page Hero ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Delivery Service</div>
+      <h1>We Bring It Right to Your Door</h1>
+      <p>Serving Albany and the Capital Region — flexible scheduling, fair pricing, careful handling every time.</p>
+    </div>
+  </section>
+
+  <!-- ── Breadcrumb ── -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <span>Delivery</span>
+    </div>
+  </div>
+
+  <!-- ── Delivery Zones ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow">Service Areas</div>
+          <h2>Delivery Zones &amp; Pricing</h2>
+        </div>
+      </div>
+      <div class="zones-grid">
+        <div class="zone-card">
+          <div class="zone-head red">
+            <h3>🏙️ Local Delivery</h3>
+            <span>City of Albany &amp; close surroundings</span>
+          </div>
+          <div class="zone-body">
+            <ul>
+              <li>Albany</li>
+              <li>Cohoes</li>
+              <li>Watervliet</li>
+              <li>Green Island</li>
+              <li>Menands</li>
+              <li>Colonie (parts)</li>
+            </ul>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--gray-100);">
+              <p style="font-size:0.72rem;color:var(--gray-500);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Rate</p>
+              <p style="font-size:1rem;font-weight:700;color:var(--navy);">Call for Current Pricing</p>
+            </div>
+          </div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-head blue">
+            <h3>📍 Extended Delivery</h3>
+            <span>Up to 20 miles from Albany</span>
+          </div>
+          <div class="zone-body">
+            <ul>
+              <li>Troy</li>
+              <li>Schenectady</li>
+              <li>Rensselaer</li>
+              <li>Guilderland</li>
+              <li>Delmar</li>
+              <li>Latham</li>
+            </ul>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--gray-100);">
+              <p style="font-size:0.72rem;color:var(--gray-500);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Rate</p>
+              <p style="font-size:1rem;font-weight:700;color:var(--navy);">Call for Current Pricing</p>
+            </div>
+          </div>
+        </div>
+        <div class="zone-card">
+          <div class="zone-head navy">
+            <h3>🗺️ Out-of-Area</h3>
+            <span>More than 20 miles from Albany</span>
+          </div>
+          <div class="zone-body">
+            <ul>
+              <li>Saratoga Springs</li>
+              <li>Amsterdam</li>
+              <li>Hudson</li>
+              <li>Glens Falls</li>
+              <li>Catskill</li>
+              <li>And anywhere else!</li>
+            </ul>
+            <div style="margin-top:16px;padding-top:14px;border-top:1px solid var(--gray-100);">
+              <p style="font-size:0.72rem;color:var(--gray-500);font-family:'Montserrat',sans-serif;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:4px;">Rate</p>
+              <p style="font-size:1rem;font-weight:700;color:var(--red);">📞 Call for a Quote</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center;display:block;margin-bottom:36px;">
+        <div class="eyebrow" style="text-align:center;">Simple Process</div>
+        <h2>How Delivery Works</h2>
+      </div>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h3>Call or Visit</h3>
+          <p>Browse our showroom or call us to discuss what you need.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h3>Get a Quote</h3>
+          <p>We'll give you a delivery quote based on your location and items.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h3>Pick a Date</h3>
+          <p>Choose a convenient time — available 7 days, 10AM–7PM.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h3>We Deliver</h3>
+          <p>Our team brings your items right to your door, carefully and on time.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── What We Deliver ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow">We Handle It All</div>
+          <h2>What We Deliver</h2>
+        </div>
+        <a href="shop.html" class="view-all">Browse Products →</a>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;">
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🧊</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Refrigerators</strong><span style="font-size:0.8rem;color:var(--gray-500);">All styles &amp; sizes</span></div>
+        </div>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">👕</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Washers &amp; Dryers</strong><span style="font-size:0.8rem;color:var(--gray-500);">Front &amp; top load</span></div>
+        </div>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🍳</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Stoves &amp; Ranges</strong><span style="font-size:0.8rem;color:var(--gray-500);">Gas &amp; electric</span></div>
+        </div>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🍽️</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Dishwashers</strong><span style="font-size:0.8rem;color:var(--gray-500);">Built-in &amp; portable</span></div>
+        </div>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">🛋️</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Furniture</strong><span style="font-size:0.8rem;color:var(--gray-500);">Sofas, beds, dining</span></div>
+        </div>
+        <div style="background:var(--off-white);border-radius:var(--radius);padding:20px;display:flex;align-items:center;gap:14px;">
+          <span style="font-size:2rem;">❄️</span>
+          <div><strong style="display:block;font-size:0.9rem;color:var(--navy);">Air Conditioners</strong><span style="font-size:0.8rem;color:var(--gray-500);">Window &amp; portable</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FAQ ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head" style="justify-content:center;text-align:center;display:block;margin-bottom:36px;">
+        <div class="eyebrow" style="text-align:center;">FAQ</div>
+        <h2>Delivery Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you deliver 7 days a week? <span class="arr">▾</span></button>
+          <div class="faq-a">Yes! We deliver 7 days a week from 10AM to 7PM. Call us to schedule a time that works for you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How far do you deliver? <span class="arr">▾</span></button>
+          <div class="faq-a">We deliver anywhere! Deliveries within 20 miles of Albany have standard rates. Beyond 20 miles, call us for a custom quote — we'll work something out.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Can you remove my old appliance? <span class="arr">▾</span></button>
+          <div class="faq-a">Haul-away may be available. Ask us when you schedule your delivery and we'll let you know what we can do.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">Do you install appliances? <span class="arr">▾</span></button>
+          <div class="faq-a">We can assist with basic placement and hookup on many items. Contact us when scheduling to discuss installation needs.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)">How do I schedule a delivery? <span class="arr">▾</span></button>
+          <div class="faq-a">Call us at <a href="tel:5185990070" style="color:var(--red);font-weight:700;">(518) 599-0070</a> or stop by our store at 137 Central Ave, Albany NY. We'll get you set up quickly.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Schedule CTA ── -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Schedule Delivery?</h2>
+      <p>Call us or email — we'll find a time that works for you. Open 7 days a week.</p>
+      <div class="cta-btns">
+        <a href="tel:5185990070" class="btn-outline-dark">📞 (518) 599-0070</a>
+        <a href="mailto:518smartbuyappliances@gmail.com" class="btn-primary">✉️ Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="SmartBuy Home Outlet" />
+          <p>Albany's go-to outlet for affordable appliances and furniture.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=refrigerators">Refrigerators</a></li>
+            <li><a href="shop.html?cat=freezers">Freezers</a></li>
+            <li><a href="shop.html?cat=stoves">Stoves &amp; Ranges</a></li>
+            <li><a href="shop.html?cat=washers-dryers-combos">Washer-Dryer Combos</a></li>
+            <li><a href="shop.html?cat=washers">Washers</a></li>
+            <li><a href="shop.html?cat=dryers">Dryers</a></li>
+            <li><a href="shop.html?cat=dishwashers">Dishwashers</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=scratch-dent">Scratch &amp; Dent</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="delivery.html">Delivery Info</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-detail">📍 <span>137 Central Ave<br>Albany, NY 12206</span></div>
+          <div class="footer-detail">📞 <a href="tel:5185990070">(518) 599-0070</a></div>
+          <div class="footer-detail">✉️ <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
+          <div class="footer-detail">🕐 <span>Mon–Sun: 10AM–7PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2025 SmartBuy Home Outlet. All rights reserved.</p>
+        <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+    function toggleFaq(btn) { btn.classList.toggle('open'); btn.nextElementSibling.classList.toggle('open'); }
+  </script>
+</body>
+</html>

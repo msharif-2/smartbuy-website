@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBuy Home Outlet | Appliances & Furniture — Albany, NY</title>
+  <meta name="description" content="Albany's best deals on appliances and furniture. Refrigerators, washers, dryers, stoves, dishwashers and more. Open 7 days 10AM-7PM at 137 Central Ave.">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ── Top Info Bar ── -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-item">📍 137 Central Ave, Albany NY 12206</span>
+        <span class="topbar-item topbar-hours">🕐 Open 7 Days · 10AM–7PM</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item">✉ 518smartbuyappliances@gmail.com</a>
+        <a href="tel:5185990070" class="topbar-phone">📞 (518) 599-0070</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Navbar ── -->
+  <nav class="navbar" style="position:sticky;top:0;z-index:1000;">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="SmartBuy Home Outlet" />
+      </a>
+      <div class="nav-search">
+        <input type="text" placeholder="Search appliances, furniture..." />
+        <button aria-label="Search">🔍</button>
+      </div>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <div>
+            <span>Call to Order</span>
+            <strong>(518) 599-0070</strong>
+          </div>
+        </div>
+        <a href="delivery.html" class="nav-cta-btn">🚚 Delivery Info</a>
+      </div>
+      <div class="nav-toggle" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <!-- Mobile nav -->
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">🏠 Home</a>
+      <a href="shop.html">🛒 Shop All</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Washer-Dryer Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="red-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── Category Nav Bar ── -->
+  <div class="cat-nav">
+    <div class="container">
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?cat=featured">⭐ Featured</a>
+      <a href="shop.html?cat=top-sellers">🔥 Top Sellers</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="sd-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+    </div>
+  </div>
+
+  <!-- ── Hero ── -->
+  <section class="hero" style="background-image:url('https://appliances4lessbristol.com/wp-content/uploads/2022/05/image3.jpg');background-size:cover;background-position:center right;">
+    <div style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(13,27,42,0.92) 40%,rgba(13,27,42,0.55) 100%);"></div>
+    <div class="container" style="position:relative;">
+      <div class="hero-content">
+        <div class="hero-badge">⚡ Albany's #1 Home Outlet</div>
+        <h1>Big Savings on<br><em>Appliances</em> &amp; Furniture</h1>
+        <p>Refrigerators, washers, dryers, stoves, dishwashers and furniture — all at outlet prices. Open 7 days a week at 137 Central Ave, Albany NY.</p>
+        <div class="hero-btns">
+          <a href="shop.html" class="btn-hero-primary">Shop All Products</a>
+          <a href="shop.html?cat=scratch-dent" class="btn-hero-secondary">🏷️ Scratch &amp; Dent Deals</a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <strong>25+</strong>
+            <span>Products In Stock</span>
+          </div>
+          <div class="hero-stat">
+            <strong>7 Days</strong>
+            <span>10AM – 7PM</span>
+          </div>
+          <div class="hero-stat">
+            <strong>20+</strong>
+            <span>Mile Delivery Area</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Why Us Strip ── -->
+  <div class="why-strip">
+    <div class="container">
+      <div class="why-item">
+        <div class="why-item-icon">💰</div>
+        <div>
+          <h4>Outlet Prices</h4>
+          <p>Up to 60% below retail on brand-name appliances and furniture</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">🚚</div>
+        <div>
+          <h4>Delivery Available</h4>
+          <p>We deliver to Albany &amp; surrounding areas — call for a quote</p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">📞</div>
+        <div>
+          <h4>Call to Order</h4>
+          <p>Easy phone ordering — <a href="tel:5185990070" style="color:#86efac">(518) 599-0070</a></p>
+        </div>
+      </div>
+      <div class="why-item">
+        <div class="why-item-icon">🏬</div>
+        <div>
+          <h4>Local Albany Store</h4>
+          <p>137 Central Ave · Open 7 days · 10AM–7PM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Shop by Category ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow">Browse</div>
+          <h2>Shop by Category</h2>
+        </div>
+        <a href="shop.html" class="view-all">View All Products →</a>
+      </div>
+      <div class="cat-grid" id="catGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── Featured Products ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow">Handpicked</div>
+          <h2>⭐ Featured Products</h2>
+        </div>
+        <a href="shop.html?cat=featured" class="view-all">View All Featured →</a>
+      </div>
+      <div class="product-grid" id="featuredGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── Scratch & Dent Promo Banner ── -->
+  <div class="promo-banner">
+    <div class="container">
+      <div>
+        <div class="promo-badge">🏷️ Biggest Savings</div>
+        <h2>Scratch &amp; Dent Deals</h2>
+        <p>Minor cosmetic blemishes, 100% functional. Save up to 65% on top brands.</p>
+      </div>
+      <a href="shop.html?cat=scratch-dent" class="promo-btn">Shop Scratch &amp; Dent →</a>
+    </div>
+  </div>
+
+  <!-- ── Top Sellers ── -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-head-left">
+          <div class="eyebrow">Most Popular</div>
+          <h2>🔥 Top Sellers</h2>
+        </div>
+        <a href="shop.html?cat=top-sellers" class="view-all">View All Top Sellers →</a>
+      </div>
+      <div class="product-grid" id="topSellersGrid"></div>
+    </div>
+  </section>
+
+  <!-- ── CTA ── -->
+  <section class="cta-section">
+    <div class="container">
+      <h2>Ready to Make a SmartBuy?</h2>
+      <p>Visit our showroom at 137 Central Ave or call us to check inventory, ask questions, or schedule delivery.</p>
+      <div class="cta-btns">
+        <a href="tel:5185990070" class="btn-outline-dark">📞 (518) 599-0070</a>
+        <a href="shop.html" class="btn-primary">Browse All Products</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="SmartBuy Home Outlet" />
+          <p>Albany's go-to outlet for affordable appliances and furniture. Serving the entire Capital Region.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=refrigerators">Refrigerators</a></li>
+            <li><a href="shop.html?cat=freezers">Freezers</a></li>
+            <li><a href="shop.html?cat=stoves">Stoves &amp; Ranges</a></li>
+            <li><a href="shop.html?cat=washers-dryers-combos">Washer-Dryer Combos</a></li>
+            <li><a href="shop.html?cat=washers">Washers</a></li>
+            <li><a href="shop.html?cat=dryers">Dryers</a></li>
+            <li><a href="shop.html?cat=dishwashers">Dishwashers</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=scratch-dent">Scratch &amp; Dent</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="delivery.html">Delivery Info</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-detail">📍 <span>137 Central Ave<br>Albany, NY 12206</span></div>
+          <div class="footer-detail">📞 <a href="tel:5185990070">(518) 599-0070</a></div>
+          <div class="footer-detail">✉️ <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
+          <div class="footer-detail">🕐 <span>Mon–Sun: 10AM–7PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2025 SmartBuy Home Outlet. All rights reserved.</p>
+        <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script>
+    // Mobile nav
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    loadCatalog().then(() => {
+      // Render category grid (photo-based, skip hidden)
+      const catGridEl = document.getElementById('catGrid');
+      CATEGORIES.filter(c => !c.hidden).forEach(cat => {
+        const count = getProductsByCategory(cat.slug).length;
+        catGridEl.innerHTML += `
+          <a class="cat-card cat-card-photo" href="shop.html?cat=${cat.slug}">
+            <div class="cat-card-img-wrap">
+              <img src="${cat.image}" alt="${cat.label}" loading="lazy"
+                onerror="this.parentElement.style.background='${cat.color}33';this.style.display='none'" />
+              <div class="cat-card-overlay"></div>
+            </div>
+            <div class="cat-card-info">
+              <h3>${cat.label}</h3>
+              <div class="cat-count">${count} item${count !== 1 ? 's' : ''}</div>
+            </div>
+          </a>`;
+      });
+
+      // Render featured products (up to 8)
+      const featured = getProductsByCategory('featured').slice(0, 8);
+      document.getElementById('featuredGrid').innerHTML = featured.map(productCardHTML).join('');
+
+      // Render top sellers (up to 8)
+      const topSellers = getProductsByCategory('top-sellers').slice(0, 8);
+      document.getElementById('topSellersGrid').innerHTML = topSellers.map(productCardHTML).join('');
+    });
+  </script>
+</body>
+</html>

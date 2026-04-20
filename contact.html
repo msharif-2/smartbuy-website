@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | SmartBuy Home Outlet — Albany, NY</title>
+  <meta name="description" content="Contact SmartBuy Home Outlet. Call (518) 599-0070, email us, or visit 137 Central Ave Albany NY. Open 7 days 10AM-7PM.">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .map-wrap { border-radius: var(--radius); overflow: hidden; height: 240px; margin-top: 4px; }
+    .map-wrap iframe { width: 100%; height: 100%; border: none; }
+    .hours-table { width: 100%; border-collapse: collapse; }
+    .hours-table tr { border-bottom: 1px solid var(--gray-100); }
+    .hours-table tr:last-child { border-bottom: none; }
+    .hours-table td { padding: 9px 0; font-size: 0.88rem; color: var(--gray-700); }
+    .hours-table td:last-child { text-align: right; font-weight: 600; color: var(--navy); }
+    .hours-table .today td { color: var(--red); font-weight: 700; }
+    .hours-table .today td:last-child { color: var(--red); }
+  </style>
+</head>
+<body>
+
+  <!-- ── Top Info Bar ── -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-item">📍 137 Central Ave, Albany NY 12206</span>
+        <span class="topbar-item topbar-hours">🕐 Open 7 Days · 10AM–7PM</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item">✉ 518smartbuyappliances@gmail.com</a>
+        <a href="tel:5185990070" class="topbar-phone">📞 (518) 599-0070</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Navbar ── -->
+  <nav class="navbar" style="position:sticky;top:0;z-index:1000;">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="SmartBuy Home Outlet" />
+      </a>
+      <div class="nav-search">
+        <input type="text" placeholder="Search appliances, furniture..." />
+        <button aria-label="Search">🔍</button>
+      </div>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <div>
+            <span>Call to Order</span>
+            <strong>(518) 599-0070</strong>
+          </div>
+        </div>
+        <a href="shop.html" class="nav-cta-btn">🛒 Shop Now</a>
+      </div>
+      <div class="nav-toggle" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">🏠 Home</a>
+      <a href="shop.html">🛒 Shop All</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Washer-Dryer Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="red-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── Category Nav Bar ── -->
+  <div class="cat-nav">
+    <div class="container">
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?cat=featured">⭐ Featured</a>
+      <a href="shop.html?cat=top-sellers">🔥 Top Sellers</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="sd-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+    </div>
+  </div>
+
+  <!-- ── Page Hero ── -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="eyebrow">Get in Touch</div>
+      <h1>We're Here to Help</h1>
+      <p>Questions about inventory, pricing, or delivery? Reach out — we'd love to hear from you.</p>
+    </div>
+  </section>
+
+  <!-- ── Breadcrumb ── -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <span>Contact</span>
+    </div>
+  </div>
+
+  <!-- ── Contact Content ── -->
+  <section class="section">
+    <div class="container">
+      <div class="section-2col">
+
+        <!-- Form -->
+        <div class="contact-form-box">
+          <h2>Send Us a Message</h2>
+          <form action="mailto:518smartbuyappliances@gmail.com" method="POST" enctype="text/plain" onsubmit="handleSubmit(event)">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="First Name" placeholder="John" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="Last Name" placeholder="Smith" required />
+              </div>
+            </div>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="Phone" placeholder="(518) 000-0000" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="Email" placeholder="you@email.com" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">What can we help with?</label>
+              <select id="subject" name="Subject">
+                <option value="">Select a topic...</option>
+                <option>Appliance Inquiry</option>
+                <option>Furniture Inquiry</option>
+                <option>Delivery Quote</option>
+                <option>Schedule a Delivery</option>
+                <option>Scratch &amp; Dent Info</option>
+                <option>General Question</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="Message" placeholder="Tell us what you're looking for or ask us anything..."></textarea>
+            </div>
+            <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap;">
+              <button type="submit" class="btn-primary" id="submitBtn">Send Message</button>
+              <span style="font-size:0.82rem;color:var(--gray-500);">Or call us at <a href="tel:5185990070" style="color:var(--red);font-weight:700;">(518) 599-0070</a></span>
+            </div>
+          </form>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="info-card-stack">
+          <div class="info-card">
+            <div class="info-card-icon">📍</div>
+            <div>
+              <h4>Visit Our Showroom</h4>
+              <p>137 Central Ave<br>Albany, NY 12206</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">📞</div>
+            <div>
+              <h4>Call Us</h4>
+              <p><a href="tel:5185990070">(518) 599-0070</a></p>
+              <p style="font-size:0.8rem;color:var(--gray-500);margin-top:3px;">Best way to reach us for fast answers</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <div class="info-card-icon">✉️</div>
+            <div>
+              <h4>Email Us</h4>
+              <p><a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></p>
+            </div>
+          </div>
+
+          <!-- Hours card -->
+          <div class="info-card" style="flex-direction:column;gap:14px;">
+            <div style="display:flex;gap:16px;align-items:center;">
+              <div class="info-card-icon">🕐</div>
+              <div><h4>Store Hours</h4><p>Open 7 days a week</p></div>
+            </div>
+            <table class="hours-table" id="hoursTable">
+              <tr><td>Monday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Tuesday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Wednesday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Thursday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Friday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Saturday</td><td>10:00 AM – 7:00 PM</td></tr>
+              <tr><td>Sunday</td><td>10:00 AM – 7:00 PM</td></tr>
+            </table>
+          </div>
+
+          <!-- Map -->
+          <div class="map-wrap">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2940.6!2d-73.7741!3d42.6603!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89de0a3b0a3e5b%3A0x0!2s137+Central+Ave%2C+Albany%2C+NY+12206!5e0!3m2!1sen!2sus!4v1"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="SmartBuy Home Outlet map">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="SmartBuy Home Outlet" />
+          <p>Albany's go-to outlet for affordable appliances and furniture. Serving the entire Capital Region.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=refrigerators">Refrigerators</a></li>
+            <li><a href="shop.html?cat=freezers">Freezers</a></li>
+            <li><a href="shop.html?cat=stoves">Stoves &amp; Ranges</a></li>
+            <li><a href="shop.html?cat=washers-dryers-combos">Washer-Dryer Combos</a></li>
+            <li><a href="shop.html?cat=washers">Washers</a></li>
+            <li><a href="shop.html?cat=dryers">Dryers</a></li>
+            <li><a href="shop.html?cat=dishwashers">Dishwashers</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=scratch-dent">Scratch &amp; Dent</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="delivery.html">Delivery Info</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-detail">📍 <span>137 Central Ave<br>Albany, NY 12206</span></div>
+          <div class="footer-detail">📞 <a href="tel:5185990070">(518) 599-0070</a></div>
+          <div class="footer-detail">✉️ <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
+          <div class="footer-detail">🕐 <span>Mon–Sun: 10AM–7PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2025 SmartBuy Home Outlet. All rights reserved.</p>
+        <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMobileNav() { document.getElementById('mobileNav').classList.toggle('open'); }
+
+    // Highlight today
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const today = days[new Date().getDay()];
+    document.querySelectorAll('#hoursTable tr').forEach(row => {
+      if (row.cells[0]?.textContent === today) row.classList.add('today');
+    });
+
+    function handleSubmit(e) {
+      setTimeout(() => {
+        const btn = document.getElementById('submitBtn');
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = 'var(--blue)';
+        btn.disabled = true;
+      }, 100);
+    }
+  </script>
+</body>
+</html>

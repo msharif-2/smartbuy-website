@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop | SmartBuy Home Outlet — Albany, NY</title>
+  <meta name="description" content="Browse all appliances and furniture at SmartBuy Home Outlet in Albany, NY. Refrigerators, washers, dryers, stoves, dishwashers, and furniture at outlet prices.">
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .no-results {
+      grid-column: 1/-1;
+      text-align: center;
+      padding: 60px 20px;
+      color: var(--gray-500);
+    }
+    .no-results h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--navy); }
+    .mobile-filter-toggle {
+      display: none;
+      width: 100%;
+      background: var(--navy);
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 11px 16px;
+      border: none;
+      border-radius: var(--radius-sm);
+      margin-bottom: 16px;
+      text-align: left;
+    }
+    @media (max-width: 860px) {
+      .mobile-filter-toggle { display: block; }
+    }
+    .sort-pills {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .sort-pill {
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1.5px solid var(--gray-300);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gray-700);
+      background: var(--white);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .sort-pill:hover, .sort-pill.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Top Info Bar ── -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-left">
+        <span class="topbar-item">📍 137 Central Ave, Albany NY 12206</span>
+        <span class="topbar-item topbar-hours">🕐 Open 7 Days · 10AM–7PM</span>
+      </div>
+      <div class="topbar-right">
+        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item">✉ 518smartbuyappliances@gmail.com</a>
+        <a href="tel:5185990070" class="topbar-phone">📞 (518) 599-0070</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Navbar ── -->
+  <nav class="navbar" style="position:sticky;top:0;z-index:1000;">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <img src="logo.png" alt="SmartBuy Home Outlet" />
+      </a>
+      <div class="nav-search">
+        <input type="text" id="searchInput" placeholder="Search appliances, furniture..." oninput="applyFilters()" />
+        <button aria-label="Search">🔍</button>
+      </div>
+      <div class="nav-right">
+        <div class="nav-phone">
+          <span class="nav-phone-icon">📞</span>
+          <div>
+            <span>Call to Order</span>
+            <strong>(518) 599-0070</strong>
+          </div>
+        </div>
+        <a href="delivery.html" class="nav-cta-btn">🚚 Delivery Info</a>
+      </div>
+      <div class="nav-toggle" onclick="toggleMobileNav()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <div class="mobile-nav" id="mobileNav">
+      <a href="index.html">🏠 Home</a>
+      <a href="shop.html">🛒 Shop All</a>
+      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">🔄 Washer-Dryer Combos</a>
+      <a href="shop.html?cat=washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="red-link">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+      <a href="about.html">ℹ️ About</a>
+      <a href="contact.html">📞 Contact</a>
+    </div>
+  </nav>
+
+  <!-- ── Category Nav Bar ── -->
+  <div class="cat-nav">
+    <div class="container">
+      <a href="shop.html" class="active" id="nav-all">Shop All</a>
+      <a href="shop.html?cat=featured" id="nav-featured">⭐ Featured</a>
+      <a href="shop.html?cat=top-sellers" id="nav-top-sellers">🔥 Top Sellers</a>
+      <a href="shop.html?cat=refrigerators" id="nav-refrigerators">🧊 Refrigerators</a>
+      <a href="shop.html?cat=freezers" id="nav-freezers">❄️ Freezers</a>
+      <a href="shop.html?cat=stoves" id="nav-stoves">🍳 Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos" id="nav-washers-dryers-combos">🔄 Combos</a>
+      <a href="shop.html?cat=washers" id="nav-washers">👕 Washers</a>
+      <a href="shop.html?cat=dryers" id="nav-dryers">💨 Dryers</a>
+      <a href="shop.html?cat=dishwashers" id="nav-dishwashers">🍽️ Dishwashers</a>
+      <a href="shop.html?cat=furniture" id="nav-furniture">🛋️ Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="sd-link" id="nav-scratch-dent">🏷️ Scratch &amp; Dent</a>
+      <a href="delivery.html">🚚 Delivery</a>
+    </div>
+  </div>
+
+  <!-- ── Page Hero ── -->
+  <section class="page-hero" id="pageHero">
+    <div class="container">
+      <div class="eyebrow">SmartBuy Home Outlet</div>
+      <h1 id="pageTitle">Shop All Products</h1>
+      <p id="pageSubtitle">Browse our full selection of appliances and furniture at outlet prices.</p>
+    </div>
+  </section>
+
+  <!-- ── Breadcrumb ── -->
+  <div class="breadcrumb">
+    <div class="container">
+      <a href="index.html">Home</a>
+      <span class="sep">›</span>
+      <a href="shop.html">Shop</a>
+      <span class="sep" id="bcSep" style="display:none">›</span>
+      <span id="bcCurrent"></span>
+    </div>
+  </div>
+
+  <!-- ── Shop Layout ── -->
+  <div class="container">
+    <div class="shop-layout">
+
+      <!-- Sidebar -->
+      <aside class="shop-sidebar">
+        <button class="mobile-filter-toggle" onclick="toggleSidebar()">☰ Filter &amp; Sort</button>
+
+        <!-- Categories -->
+        <div class="sidebar-box" id="sidebarBox">
+          <div class="sidebar-box-head">Categories</div>
+          <div class="sidebar-box-body" id="catFilters"></div>
+        </div>
+
+        <!-- Brands -->
+        <div class="sidebar-box" id="brandBox">
+          <div class="sidebar-box-head">Brand</div>
+          <div class="sidebar-box-body" id="brandFilters"></div>
+        </div>
+
+        <!-- Price Range -->
+        <div class="sidebar-box" id="priceBox">
+          <div class="sidebar-box-head">Price Range</div>
+          <div class="sidebar-box-body">
+            <label class="filter-option">
+              <input type="radio" name="price" value="all" checked onchange="applyFilters()" /> All Prices
+              <span class="filter-count" id="pc-all"></span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="price" value="0-299" onchange="applyFilters()" /> Under $300
+              <span class="filter-count" id="pc-0-299"></span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="price" value="300-499" onchange="applyFilters()" /> $300 – $499
+              <span class="filter-count" id="pc-300-499"></span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="price" value="500-749" onchange="applyFilters()" /> $500 – $749
+              <span class="filter-count" id="pc-500-749"></span>
+            </label>
+            <label class="filter-option">
+              <input type="radio" name="price" value="750-9999" onchange="applyFilters()" /> $750+
+              <span class="filter-count" id="pc-750-9999"></span>
+            </label>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Product Area -->
+      <main>
+        <div class="shop-toolbar">
+          <div class="shop-count" id="shopCount">Showing all products</div>
+          <div class="sort-pills">
+            <button class="sort-pill active" onclick="setSort('default', this)">Default</button>
+            <button class="sort-pill" onclick="setSort('price-asc', this)">Price: Low to High</button>
+            <button class="sort-pill" onclick="setSort('price-desc', this)">Price: High to Low</button>
+            <button class="sort-pill" onclick="setSort('savings', this)">Most Savings</button>
+          </div>
+        </div>
+
+        <!-- Active filter tags -->
+        <div class="active-filters" id="activeTags"></div>
+
+        <!-- Product grid -->
+        <div class="product-grid product-grid-3" id="productGrid"></div>
+      </main>
+
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer class="footer" style="margin-top:48px;">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="SmartBuy Home Outlet" />
+          <p>Albany's go-to outlet for affordable appliances and furniture. Serving the entire Capital Region.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Shop</h4>
+          <ul>
+            <li><a href="shop.html?cat=refrigerators">Refrigerators</a></li>
+            <li><a href="shop.html?cat=freezers">Freezers</a></li>
+            <li><a href="shop.html?cat=stoves">Stoves &amp; Ranges</a></li>
+            <li><a href="shop.html?cat=washers-dryers-combos">Washer-Dryer Combos</a></li>
+            <li><a href="shop.html?cat=washers">Washers</a></li>
+            <li><a href="shop.html?cat=dryers">Dryers</a></li>
+            <li><a href="shop.html?cat=dishwashers">Dishwashers</a></li>
+            <li><a href="shop.html?cat=furniture">Furniture</a></li>
+            <li><a href="shop.html?cat=scratch-dent">Scratch &amp; Dent</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Info</h4>
+          <ul>
+            <li><a href="delivery.html">Delivery Info</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-detail">📍 <span>137 Central Ave<br>Albany, NY 12206</span></div>
+          <div class="footer-detail">📞 <a href="tel:5185990070">(518) 599-0070</a></div>
+          <div class="footer-detail">✉️ <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
+          <div class="footer-detail">🕐 <span>Mon–Sun: 10AM–7PM</span></div>
+        </div>
+      </div>
+      <div class="footer-bar">
+        <p>&copy; 2025 SmartBuy Home Outlet. All rights reserved.</p>
+        <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products.js"></script>
+  <script>
+    // ── State ──
+    let activeCat    = null;
+    let activeBrands = new Set();
+    let activePrice  = 'all';
+    let sortMode     = 'default';
+    let searchQ      = '';
+
+    // ── Init ──
+    function init() {
+      const params = new URLSearchParams(window.location.search);
+      activeCat = params.get('cat') || null;
+
+      // Update hero + breadcrumb
+      if (activeCat) {
+        const cat = CATEGORIES.find(c => c.slug === activeCat);
+        if (cat) {
+          document.getElementById('pageTitle').textContent = cat.icon + ' ' + cat.label;
+          document.getElementById('pageSubtitle').textContent =
+            `Browse our selection of ${cat.label.toLowerCase()} at outlet prices.`;
+          document.getElementById('bcSep').style.display = '';
+          document.getElementById('bcCurrent').textContent = cat.label;
+        }
+      }
+
+      // Highlight active cat nav link
+      if (activeCat) {
+        const navEl = document.getElementById('nav-' + activeCat);
+        if (navEl) { navEl.classList.add('active'); document.getElementById('nav-all').classList.remove('active'); }
+      }
+
+      buildSidebar();
+      applyFilters();
+    }
+
+    // ── Build sidebar ──
+    function buildSidebar() {
+      // Categories
+      const catEl = document.getElementById('catFilters');
+      catEl.innerHTML = `<label class="filter-option">
+        <input type="radio" name="cat" value="" ${!activeCat ? 'checked' : ''} onchange="setCat('')" />
+        All Categories <span class="filter-count">${PRODUCTS.length}</span>
+      </label>`;
+      CATEGORIES.forEach(cat => {
+        const count = getProductsByCategory(cat.slug).length;
+        catEl.innerHTML += `<label class="filter-option">
+          <input type="radio" name="cat" value="${cat.slug}" ${activeCat === cat.slug ? 'checked' : ''} onchange="setCat('${cat.slug}')" />
+          ${cat.icon} ${cat.label} <span class="filter-count">${count}</span>
+        </label>`;
+      });
+
+      // Brands
+      const brands = [...new Set(PRODUCTS.map(p => p.brand))].sort();
+      const brandEl = document.getElementById('brandFilters');
+      brandEl.innerHTML = brands.map(b => {
+        const count = PRODUCTS.filter(p => p.brand === b).length;
+        return `<label class="filter-option">
+          <input type="checkbox" value="${b}" onchange="toggleBrand('${b}')" />
+          ${b} <span class="filter-count">${count}</span>
+        </label>`;
+      }).join('');
+
+      // Price counts
+      const ranges = [['all', 0, 99999], ['0-299', 0, 299], ['300-499', 300, 499], ['500-749', 500, 749], ['750-9999', 750, 9999]];
+      ranges.forEach(([key, min, max]) => {
+        const el = document.getElementById('pc-' + key);
+        if (el) el.textContent = PRODUCTS.filter(p => p.price >= min && p.price <= max).length;
+      });
+    }
+
+    // ── Filter actions ──
+    function setCat(slug) {
+      activeCat = slug || null;
+      const url = new URL(window.location);
+      if (activeCat) url.searchParams.set('cat', activeCat);
+      else url.searchParams.delete('cat');
+      history.pushState({}, '', url);
+      applyFilters();
+    }
+
+    function toggleBrand(brand) {
+      if (activeBrands.has(brand)) activeBrands.delete(brand);
+      else activeBrands.add(brand);
+      applyFilters();
+    }
+
+    function setSort(mode, btn) {
+      sortMode = mode;
+      document.querySelectorAll('.sort-pill').forEach(p => p.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilters();
+    }
+
+    // ── Apply all filters ──
+    function applyFilters() {
+      searchQ = (document.getElementById('searchInput')?.value || '').toLowerCase().trim();
+      const priceVal = document.querySelector('input[name="price"]:checked')?.value || 'all';
+
+      let results = [...PRODUCTS];
+
+      // Category
+      if (activeCat) results = results.filter(p => p.categories.includes(activeCat));
+
+      // Brand
+      if (activeBrands.size > 0) results = results.filter(p => activeBrands.has(p.brand));
+
+      // Price
+      if (priceVal !== 'all') {
+        const [min, max] = priceVal.split('-').map(Number);
+        results = results.filter(p => p.price >= min && p.price <= max);
+      }
+
+      // Search
+      if (searchQ) {
+        results = results.filter(p =>
+          p.name.toLowerCase().includes(searchQ) ||
+          p.brand.toLowerCase().includes(searchQ) ||
+          p.description.toLowerCase().includes(searchQ)
+        );
+      }
+
+      // Sort
+      if (sortMode === 'price-asc')  results.sort((a,b) => a.price - b.price);
+      if (sortMode === 'price-desc') results.sort((a,b) => b.price - a.price);
+      if (sortMode === 'savings')    results.sort((a,b) => savingsPercent(b) - savingsPercent(a));
+
+      // Render
+      const grid = document.getElementById('productGrid');
+      if (results.length === 0) {
+        grid.innerHTML = `<div class="no-results">
+          <h3>No products found</h3>
+          <p>Try adjusting your filters or <a href="tel:5185990070" style="color:var(--red)">call us</a> — we may have more in stock!</p>
+        </div>`;
+      } else {
+        grid.innerHTML = results.map(productCardHTML).join('');
+      }
+
+      document.getElementById('shopCount').textContent =
+        `Showing ${results.length} product${results.length !== 1 ? 's' : ''}`;
+
+      renderActiveTags();
+    }
+
+    // ── Active filter tags ──
+    function renderActiveTags() {
+      const tags = document.getElementById('activeTags');
+      let html = '';
+      if (activeCat) {
+        const cat = CATEGORIES.find(c => c.slug === activeCat);
+        html += `<div class="filter-tag">${cat?.label || activeCat} <button onclick="setCat('')">×</button></div>`;
+      }
+      activeBrands.forEach(b => {
+        html += `<div class="filter-tag">${b} <button onclick="removeBrand('${b}')">×</button></div>`;
+      });
+      tags.innerHTML = html;
+    }
+
+    function removeBrand(brand) {
+      activeBrands.delete(brand);
+      document.querySelectorAll('#brandFilters input').forEach(inp => {
+        if (inp.value === brand) inp.checked = false;
+      });
+      applyFilters();
+    }
+
+    // ── Sidebar toggle (mobile) ──
+    function toggleSidebar() {
+      ['sidebarBox', 'brandBox', 'priceBox'].forEach(id => {
+        document.getElementById(id).classList.toggle('show-mobile');
+      });
+    }
+
+    function toggleMobileNav() {
+      document.getElementById('mobileNav').classList.toggle('open');
+    }
+
+    loadCatalog().then(() => init());
+  </script>
+</body>
+</html>

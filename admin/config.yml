@@ -1,0 +1,98 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Products"
+    files:
+      - name: "catalog"
+        label: "All Products"
+        file: "products.json"
+        format: "json"
+        fields:
+          - label: "Products"
+            name: "products"
+            widget: "list"
+            summary: "{{fields.name}} — Sale: ${{fields.price}}"
+            fields:
+              - label: "ID (unique number — use next available e.g. 38, 39...)"
+                name: "id"
+                widget: "number"
+                value_type: "int"
+              - label: "Product Name"
+                name: "name"
+                widget: "string"
+              - label: "Brand"
+                name: "brand"
+                widget: "select"
+                options:
+                  - LG
+                  - Samsung
+                  - SmartBuy
+                  - GE
+                  - Whirlpool
+                  - Maytag
+                  - Frigidaire
+                  - Bosch
+                  - Other
+              - label: "SKU / Model Number"
+                name: "sku"
+                widget: "string"
+                required: false
+              - label: "Sale Price ($)"
+                name: "price"
+                widget: "number"
+                value_type: "int"
+              - label: "Original Retail Price ($)"
+                name: "was"
+                widget: "number"
+                value_type: "int"
+              - label: "Image URL"
+                name: "image"
+                widget: "string"
+                hint: "Paste the full image URL (https://...)"
+              - label: "Description"
+                name: "description"
+                widget: "text"
+              - label: "Badge"
+                name: "badge"
+                widget: "select"
+                required: false
+                options:
+                  - label: "Sale"
+                    value: "sale"
+                  - label: "Scratch & Dent"
+                    value: "scratch-dent"
+                  - label: "New Arrival"
+                    value: "new"
+              - label: "Categories"
+                name: "categories"
+                widget: "select"
+                multiple: true
+                options:
+                  - label: "⭐ Featured"
+                    value: "featured"
+                  - label: "🔥 Top Sellers"
+                    value: "top-sellers"
+                  - label: "🧊 Refrigerators"
+                    value: "refrigerators"
+                  - label: "❄️ Freezers"
+                    value: "freezers"
+                  - label: "🍳 Stoves & Ranges"
+                    value: "stoves"
+                  - label: "🔄 Washer-Dryer Combos"
+                    value: "washers-dryers-combos"
+                  - label: "👕 Washers"
+                    value: "washers"
+                  - label: "💨 Dryers"
+                    value: "dryers"
+                  - label: "🍽️ Dishwashers"
+                    value: "dishwashers"
+                  - label: "🛋️ Furniture"
+                    value: "furniture"
+                  - label: "🏷️ Scratch & Dent"
+                    value: "scratch-dent"
