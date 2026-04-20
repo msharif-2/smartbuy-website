@@ -1,4 +1,4 @@
-// SmartBuy Home Outlet — Product Catalog
+// SmartBuy Albany — Product Catalog
 // PRODUCTS are defined inline so the site works locally.
 // When hosted on Netlify, loadCatalog() fetches products.json (edited via /admin).
 
@@ -135,5 +135,63 @@ function productCardHTML(p) {
 function viewProduct(id) {
   const p = PRODUCTS.find(x => x.id === id);
   if (!p) return;
-  alert(`${p.name}\n\nOur Price: ${formatPrice(p.price)}\nOriginal Retail: ${formatPrice(p.was)}\nYou Save: ${savingsPercent(p)}% (${formatPrice(p.was - p.price)})\n\n${p.description}\n\nCall us to order:\n(518) 599-0070`);
+  const badgeMap = {
+    'sale':         '<span class="badge badge-sale">SALE</span>',
+    'featured':     '<span class="badge badge-featured">FEATURED</span>',
+    'scratch-dent': '<span class="badge badge-sd">SCRATCH &amp; DENT</span>',
+    'new':          '<span class="badge badge-featured">NEW</span>',
+  };
+  const badge = badgeMap[p.badge] || '';
+  const savings = savingsPercent(p);
+  const save$ = formatPrice(p.was - p.price);
+
+  let modal = document.getElementById('product-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'product-modal';
+    modal.className = 'pm-overlay';
+    modal.innerHTML = '<div class="pm-dialog"></div>';
+    modal.addEventListener('click', e => { if (e.target === modal) closeProductModal(); });
+    document.body.appendChild(modal);
+  }
+
+  modal.querySelector('.pm-dialog').innerHTML = `
+    <button class="pm-close" onclick="closeProductModal()" aria-label="Close">&times;</button>
+    <div class="pm-body">
+      <div class="pm-media">
+        <div class="pm-badges">${badge}<span class="pm-save-pill">Save ${savings}%</span></div>
+        <img src="${p.image}" alt="${p.name}" onerror="this.src='https://placehold.co/600x600/f1f3f7/374151?text=Image+Coming+Soon'" />
+      </div>
+      <div class="pm-info">
+        <div class="pm-brand">${p.brand} · SKU ${p.sku}</div>
+        <h2 class="pm-name">${p.name}</h2>
+        <div class="pm-price-row">
+          <span class="pm-price">${formatPrice(p.price)}</span>
+          <span class="pm-was">${formatPrice(p.was)}</span>
+          <span class="pm-saved">You save ${save$}</span>
+        </div>
+        <p class="pm-desc">${p.description}</p>
+        <div class="pm-cta">
+          <a href="tel:5185990070" class="pm-btn-primary">📞 Call to Order · (518) 599-0070</a>
+          <a href="mailto:518smartbuyappliances@gmail.com?subject=Inquiry: ${encodeURIComponent(p.name)} (SKU ${p.sku})" class="pm-btn-secondary">✉ Email Us</a>
+        </div>
+        <div class="pm-fineprint">
+          <div>🏬 Visit our showroom · 137 Central Ave, Albany NY</div>
+          <div>🚚 Delivery available — call for a quote</div>
+          <div>🕐 Open 7 days · 10AM–7PM</div>
+        </div>
+      </div>
+    </div>`;
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
+
+function closeProductModal() {
+  const modal = document.getElementById('product-modal');
+  if (modal) modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeProductModal();
+});
