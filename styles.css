@@ -2,16 +2,18 @@
    SmartBuy Albany — Full E-Commerce Stylesheet
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
 
 :root {
-  --red:        #CC1100;
-  --red-dark:   #a50e00;
-  --red-light:  #ff2a14;
-  --blue:       #1040AA;
-  --blue-dark:  #0c2f7e;
+  /* Sale-only red (restrained) */
+  --red:        #C8102E;
+  --red-dark:   #a50e25;
+  --red-deep:   #990A0A;
+  /* Navy is the primary brand color now */
   --navy:       #0D1B2A;
   --navy-mid:   #152437;
+  --navy-soft:  #1e2d3d;
+  --accent-blue:#0332A9;
   --white:      #ffffff;
   --off-white:  #f8f9fc;
   --gray-50:    #f9fafb;
@@ -20,14 +22,16 @@
   --gray-300:   #d1d5db;
   --gray-500:   #6b7280;
   --gray-700:   #374151;
-  --text:       #111827;
-  --radius-sm:  6px;
-  --radius:     10px;
-  --radius-lg:  16px;
-  --shadow-sm:  0 1px 6px rgba(0,0,0,0.08);
-  --shadow:     0 4px 20px rgba(0,0,0,0.10);
-  --shadow-lg:  0 8px 40px rgba(0,0,0,0.14);
+  --text:       #1a1d23;
+  /* Sharper, more retail-feel radii */
+  --radius-sm:  4px;
+  --radius:     6px;
+  --radius-lg:  10px;
+  --shadow-sm:  0 1px 3px rgba(13,27,42,0.06);
+  --shadow:     0 4px 16px rgba(13,27,42,0.08);
+  --shadow-lg:  0 16px 48px rgba(13,27,42,0.14);
   --transition: 0.2s ease;
+  --ease-out:   cubic-bezier(0.33, 1, 0.68, 1);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -36,7 +40,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--w
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
-h1,h2,h3,h4,h5 { font-family: 'Montserrat', sans-serif; line-height: 1.2; }
+h1,h2,h3,h4,h5 { font-family: 'Oswald', sans-serif; line-height: 1.15; letter-spacing: -0.01em; }
 button { cursor: pointer; font-family: 'Inter', sans-serif; }
 
 .container { width: 92%; max-width: 1200px; margin: 0 auto; }
@@ -48,7 +52,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   background: var(--navy);
   color: rgba(255,255,255,0.85);
   font-size: 0.78rem;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   padding: 7px 0;
 }
@@ -144,7 +148,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   display: flex;
   align-items: center;
   gap: 8px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--navy);
@@ -158,7 +162,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   gap: 6px;
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.06em;
@@ -208,7 +212,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   align-items: center;
   gap: 6px;
   color: rgba(255,255,255,0.80);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 0.78rem;
   letter-spacing: 0.05em;
@@ -252,7 +256,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   gap: 8px;
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -279,7 +283,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .btn-hero-primary {
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.06em;
@@ -294,7 +298,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .btn-hero-secondary {
   background: transparent;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.06em;
@@ -315,7 +319,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 }
 .hero-stat strong {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.6rem;
   font-weight: 900;
   color: #fff;
@@ -343,7 +347,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   flex-wrap: wrap;
 }
 .section-head-left .eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.16em;
@@ -357,7 +361,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   color: var(--navy);
 }
 .view-all {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -515,7 +519,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   position: absolute;
   top: 10px;
   left: 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -533,7 +537,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   right: 10px;
   background: #16a34a;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.68rem;
   font-weight: 700;
   padding: 3px 7px;
@@ -569,7 +573,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   margin-bottom: 12px;
 }
 .price-sale {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 1.25rem;
   font-weight: 800;
   color: var(--red);
@@ -584,7 +588,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   width: 100%;
   background: var(--navy);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.78rem;
   letter-spacing: 0.08em;
@@ -614,7 +618,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .promo-badge {
   background: rgba(255,255,255,0.2);
   border: 2px solid rgba(255,255,255,0.5);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.14em;
@@ -637,7 +641,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .promo-btn {
   background: #fff;
   color: var(--red);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 800;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -710,7 +714,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .sidebar-box-head {
   background: var(--navy);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.10em;
@@ -815,7 +819,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 }
 .page-hero .container { position: relative; }
 .page-hero .eyebrow {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.70rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -871,7 +875,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .form-group { margin-bottom: 18px; }
 .form-group label {
   display: block;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -926,7 +930,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 4px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
 }
 .info-card p, .info-card a {
@@ -985,7 +989,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   border-radius: 50%;
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 800;
   font-size: 1.1rem;
   display: flex;
@@ -999,7 +1003,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 /* FAQ */
 .faq-list { max-width: 720px; margin: 0 auto; }
 .faq-item { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-sm); margin-bottom: 12px; overflow: hidden; }
-.faq-q { width: 100%; text-align: left; padding: 18px 22px; background: none; border: none; font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--navy); display: flex; justify-content: space-between; align-items: center; }
+.faq-q { width: 100%; text-align: left; padding: 18px 22px; background: none; border: none; font-family: 'Oswald', sans-serif; font-weight: 700; font-size: 0.92rem; color: var(--navy); display: flex; justify-content: space-between; align-items: center; }
 .faq-q .arr { color: var(--red); transition: transform var(--transition); font-size: 1rem; }
 .faq-q.open .arr { transform: rotate(180deg); }
 .faq-a { display: none; padding: 0 22px 16px; font-size: 0.88rem; color: var(--gray-700); line-height: 1.7; }
@@ -1027,7 +1031,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   max-width: 230px;
 }
 .footer-col h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -1072,7 +1076,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   display: inline-block;
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -1088,7 +1092,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   display: inline-block;
   background: transparent;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.82rem;
   letter-spacing: 0.08em;
@@ -1231,7 +1235,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .pm-save-pill {
   background: #16a34a;
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 0.7rem;
   font-weight: 800;
   letter-spacing: 0.06em;
@@ -1269,7 +1273,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   border-bottom: 1px solid var(--gray-200);
 }
 .pm-price {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 2.2rem;
   font-weight: 900;
   color: var(--red);
@@ -1308,7 +1312,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   gap: 8px;
   background: var(--red);
   color: #fff;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 800;
   font-size: 0.92rem;
   letter-spacing: 0.04em;
@@ -1326,7 +1330,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
   gap: 8px;
   background: var(--white);
   color: var(--navy);
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
@@ -1406,7 +1410,7 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 .mobile-nav.open { display: flex; }
 .mobile-nav a {
   padding: 11px 24px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-weight: 600;
   font-size: 0.88rem;
   color: var(--navy);
@@ -1415,3 +1419,396 @@ button { cursor: pointer; font-family: 'Inter', sans-serif; }
 }
 .mobile-nav a:hover { background: var(--gray-50); }
 .mobile-nav a.red-link { color: var(--red); }
+
+/* ══════════════════════════════════════════════════════════════
+   V2 REDESIGN OVERRIDES — navy primary, red sale-only, motion
+   ══════════════════════════════════════════════════════════════ */
+
+/* ── SVG icon base ── */
+.icon {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  vertical-align: -0.15em;
+  fill: none;
+  stroke: currentColor;
+  flex-shrink: 0;
+}
+.icon-lg { width: 1.5em; height: 1.5em; }
+.icon-xl { width: 2em; height: 2em; }
+
+/* ── Hero v2: split layout with lifestyle photo ── */
+.hero {
+  padding: 88px 0 96px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+}
+.hero::after { display: none; }
+.hero .container {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+  position: relative;
+}
+.hero-content { max-width: none; }
+.hero-badge {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.85);
+  padding: 6px 14px;
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+}
+.hero h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400; /* Anton has one weight */
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+  letter-spacing: -0.01em;
+  line-height: 1.02;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero h1 em {
+  font-style: normal;
+  color: #fff;
+  display: block;
+  font-size: 0.85em;
+  background: linear-gradient(90deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 1.02rem;
+  max-width: 520px;
+  line-height: 1.65;
+}
+.hero-media {
+  position: relative;
+  aspect-ratio: 4/3;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.5);
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 12s linear;
+}
+.hero-media:hover img { transform: scale(1.04); }
+.hero-media::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 60%, rgba(13,27,42,0.35) 100%);
+  pointer-events: none;
+}
+
+/* Primary CTA becomes navy-on-white (deep) or white-on-navy in hero */
+.btn-hero-primary {
+  background: #fff;
+  color: var(--navy);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.08em;
+  padding: 15px 34px;
+  border-radius: var(--radius-sm);
+  font-size: 0.86rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.btn-hero-primary:hover {
+  background: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(255,255,255,0.15);
+}
+.btn-hero-primary .icon { transition: transform 0.25s var(--ease-out); }
+.btn-hero-primary:hover .icon { transform: translateX(4px); }
+.btn-hero-secondary {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.3);
+  color: rgba(255,255,255,0.9);
+  padding: 14px 28px;
+  letter-spacing: 0.08em;
+}
+.btn-hero-secondary:hover { border-color: #fff; background: transparent; }
+
+/* ── Hero stats ── */
+.hero-stats { gap: 40px; margin-top: 48px; }
+.hero-stat {
+  padding-left: 20px;
+  border-left: 2px solid rgba(255,255,255,0.12);
+}
+.hero-stat:first-child { padding-left: 0; border-left: none; }
+.hero-stat strong {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  letter-spacing: 0;
+}
+.hero-stat span {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.1em;
+}
+
+/* ── Topbar: remove red pill, cleaner ── */
+.topbar { font-size: 0.75rem; padding: 8px 0; letter-spacing: 0.02em; }
+.topbar-phone {
+  background: transparent;
+  padding: 0;
+  color: #fff !important;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+.topbar-phone:hover { border-bottom-color: #fff; }
+
+/* ── Navbar: nav-cta becomes navy outline (retail feel) ── */
+.nav-cta-btn {
+  background: var(--navy);
+  border: 1px solid var(--navy);
+  letter-spacing: 0.08em;
+}
+.nav-cta-btn:hover { background: var(--navy-mid); }
+.nav-search button { background: var(--navy); }
+.nav-search button:hover { background: var(--navy-mid); }
+.nav-search:focus-within { border-color: var(--navy); }
+.nav-phone { font-family: 'Oswald', sans-serif; }
+.nav-phone span { color: var(--gray-500); }
+
+/* ── Sticky-nav compression ── */
+.navbar {
+  transition: box-shadow 0.25s var(--ease-out), background 0.25s var(--ease-out);
+}
+.navbar.scrolled {
+  box-shadow: 0 2px 12px rgba(13,27,42,0.09);
+}
+.navbar.scrolled .container { height: 60px; }
+.navbar.scrolled .nav-logo img { height: 40px; transition: height 0.25s var(--ease-out); }
+.nav-logo img { transition: height 0.25s var(--ease-out); }
+
+/* ── Category nav: cleaner (no emojis, tighter) ── */
+.cat-nav { border-bottom: 1px solid rgba(255,255,255,0.08); }
+.cat-nav::after {
+  content: '';
+  display: block;
+  height: 2px;
+  background: var(--red);
+  width: 100%;
+}
+.cat-nav { border-bottom: none; }
+.cat-nav a { letter-spacing: 0.08em; font-weight: 500; }
+.cat-nav a:hover { background: rgba(255,255,255,0.06); }
+
+/* ── Section heads: eyebrow navy, not red ── */
+.section-head-left .eyebrow {
+  color: var(--navy);
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.2em;
+  font-weight: 500;
+}
+.section-head-left h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.005em;
+}
+.view-all {
+  color: var(--navy);
+  font-weight: 500;
+}
+.view-all .icon { transition: transform 0.25s var(--ease-out); }
+.view-all:hover .icon { transform: translateX(4px); }
+
+/* ── Why-strip: replace emoji with icons in circular frames ── */
+.why-strip { padding: 44px 0; background: var(--off-white); border-top: 1px solid var(--gray-200); border-bottom: 1px solid var(--gray-200); }
+.why-item-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.why-item-icon .icon { width: 22px; height: 22px; stroke-width: 1.8; }
+.why-item h4 { color: var(--navy); font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.01em; }
+.why-item p { color: var(--gray-700); }
+.why-item p a { color: var(--navy); font-weight: 600; border-bottom: 1px solid var(--gray-300); }
+
+/* ── Product card: refined hover ── */
+.product-card {
+  border-radius: var(--radius);
+  transition: box-shadow 0.25s var(--ease-out), transform 0.25s var(--ease-out), border-color 0.25s var(--ease-out);
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(13,27,42,0.18);
+  border-color: var(--gray-200);
+}
+.product-card:hover .product-img-wrap img { transform: scale(1.06); }
+.product-img-wrap img { transition: transform 0.5s var(--ease-out); }
+.product-img-wrap::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, transparent 70%, rgba(13,27,42,0.02) 100%);
+  pointer-events: none;
+}
+.product-name { font-family: 'Inter', sans-serif; font-weight: 600; letter-spacing: -0.005em; }
+.product-brand { color: var(--gray-500); letter-spacing: 0.14em; }
+
+.price-sale { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: -0.01em; }
+.btn-addcart {
+  background: var(--navy);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm);
+}
+.btn-addcart:hover { background: var(--navy-mid); }
+
+/* ── Badges tightened ── */
+.badge { font-family: 'Oswald', sans-serif; font-weight: 500; border-radius: 2px; font-size: 0.58rem; letter-spacing: 0.12em; padding: 4px 8px; }
+
+/* ── Promo banner: cleaner red block ── */
+.promo-banner {
+  background: var(--red);
+  background-image:
+    radial-gradient(ellipse at top left, rgba(255,255,255,0.08), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(0,0,0,0.2), transparent 60%);
+}
+.promo-btn {
+  background: #fff;
+  color: var(--red-deep);
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+.promo-btn .icon { transition: transform 0.25s var(--ease-out); }
+.promo-btn:hover .icon { transform: translateX(4px); }
+.promo-banner h2 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: -0.005em; }
+
+/* ── Footer refinements ── */
+.footer { background: var(--navy); }
+.footer h4 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: 0.08em; }
+.footer .footer-detail { display: flex; align-items: flex-start; gap: 10px; }
+.footer .footer-detail .icon { color: rgba(255,255,255,0.5); margin-top: 3px; width: 16px; height: 16px; }
+
+/* ── Scroll-reveal animation ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s var(--ease-out), transform 0.6s var(--ease-out);
+  will-change: opacity, transform;
+}
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Stagger children inside a product grid when grid reveals */
+.product-grid.reveal.in > * { animation: card-stagger 0.5s var(--ease-out) both; }
+.product-grid.reveal.in > *:nth-child(1) { animation-delay: 0.00s; }
+.product-grid.reveal.in > *:nth-child(2) { animation-delay: 0.05s; }
+.product-grid.reveal.in > *:nth-child(3) { animation-delay: 0.10s; }
+.product-grid.reveal.in > *:nth-child(4) { animation-delay: 0.15s; }
+.product-grid.reveal.in > *:nth-child(5) { animation-delay: 0.20s; }
+.product-grid.reveal.in > *:nth-child(6) { animation-delay: 0.25s; }
+.product-grid.reveal.in > *:nth-child(7) { animation-delay: 0.30s; }
+.product-grid.reveal.in > *:nth-child(8) { animation-delay: 0.35s; }
+@keyframes card-stagger {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Skeleton loader for initial product fetch ── */
+.skeleton-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.skeleton-img {
+  aspect-ratio: 4/3;
+  background: linear-gradient(90deg, var(--gray-100) 0%, var(--gray-200) 50%, var(--gray-100) 100%);
+  background-size: 200% 100%;
+  animation: skel-shimmer 1.4s ease-in-out infinite;
+}
+.skeleton-body { padding: 14px 16px 18px; }
+.skeleton-line {
+  height: 12px;
+  background: linear-gradient(90deg, var(--gray-100) 0%, var(--gray-200) 50%, var(--gray-100) 100%);
+  background-size: 200% 100%;
+  animation: skel-shimmer 1.4s ease-in-out infinite;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+.skeleton-line.short { width: 40%; }
+.skeleton-line.med   { width: 70%; }
+@keyframes skel-shimmer {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ── Button active press ── */
+button:active, .btn-hero-primary:active, .btn-addcart:active, .promo-btn:active, .nav-cta-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Respect reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .product-card:hover { transform: none; }
+  .product-img-wrap img, .cat-card-photo img { transition: none; }
+  .hero-media img { transition: none; }
+  .skeleton-img, .skeleton-line { animation: none; }
+}
+
+/* ── Anchor offset for sticky nav ── */
+:target { scroll-margin-top: 100px; }
+
+/* ── Hero responsive stacking ── */
+@media (max-width: 960px) {
+  .hero .container { grid-template-columns: 1fr; gap: 40px; }
+  .hero-media { aspect-ratio: 16/10; }
+  .hero { padding: 60px 0 72px; }
+  .hero-stats { gap: 24px; margin-top: 32px; }
+  .hero-stat { padding-left: 16px; }
+  .hero-stat strong { font-size: 1.6rem; }
+}
+
+/* ── V2 cleanup: residual red references that should be navy (sale-only rule) ── */
+.cat-card:hover { border-color: var(--navy); }
+.cat-nav { border-bottom: 2px solid var(--navy-mid); }
+.filter-option:hover { color: var(--navy); }
+.filter-option input[type="checkbox"] { accent-color: var(--navy); }
+.filter-tag button:hover { color: var(--navy); }
+.breadcrumb a { color: var(--gray-500); }
+.breadcrumb a:hover { color: var(--navy); }
+.info-card a:hover { color: var(--navy); }
+.cta-section h2 { font-family: 'Oswald', sans-serif; font-weight: 500; letter-spacing: -0.005em; }
+.btn-primary, .btn-outline-dark {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  border-radius: var(--radius-sm);
+}
+.btn-primary { background: var(--navy); }
+.btn-primary:hover { background: var(--navy-mid); }
+.btn-outline-dark { border-color: var(--navy); color: var(--navy); }
+.btn-outline-dark:hover { background: var(--navy); color: #fff; }
+
+/* Topbar hours accent: softer green */
+.topbar-hours { color: #a7f3d0; font-weight: 600; }
+
+/* Sale price: keep red (that's the rule) */
+.price-sale { color: var(--red); }
+
+/* Shop page product count meta */
+.shop-meta, .breadcrumb { font-family: 'Inter', sans-serif; }

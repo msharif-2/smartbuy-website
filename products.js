@@ -126,7 +126,7 @@ function productCardHTML(p) {
           <span class="price-was">${formatPrice(p.was)}</span>
         </div>
         <button class="btn-addcart" onclick="event.stopPropagation(); window.location.href='tel:5185990070'">
-          📞 Call to Order
+          <svg class="icon"><use href="#i-phone"/></svg> Call to Order
         </button>
       </div>
     </div>`;
@@ -172,13 +172,13 @@ function viewProduct(id) {
         </div>
         <p class="pm-desc">${p.description}</p>
         <div class="pm-cta">
-          <a href="tel:5185990070" class="pm-btn-primary">📞 Call to Order · (518) 599-0070</a>
-          <a href="mailto:518smartbuyappliances@gmail.com?subject=Inquiry: ${encodeURIComponent(p.name)} (SKU ${p.sku})" class="pm-btn-secondary">✉ Email Us</a>
+          <a href="tel:5185990070" class="pm-btn-primary"><svg class="icon"><use href="#i-phone"/></svg> Call to Order · (518) 599-0070</a>
+          <a href="mailto:518smartbuyappliances@gmail.com?subject=Inquiry: ${encodeURIComponent(p.name)} (SKU ${p.sku})" class="pm-btn-secondary"><svg class="icon"><use href="#i-mail"/></svg> Email Us</a>
         </div>
         <div class="pm-fineprint">
-          <div>🏬 Visit our showroom · 137 Central Ave, Albany NY</div>
-          <div>🚚 Delivery available — call for a quote</div>
-          <div>🕐 Open 7 days · 10AM–7PM</div>
+          <div><svg class="icon"><use href="#i-store"/></svg> Visit our showroom · 137 Central Ave, Albany NY</div>
+          <div><svg class="icon"><use href="#i-truck"/></svg> Delivery available — call for a quote</div>
+          <div><svg class="icon"><use href="#i-clock"/></svg> Open 7 days · 10AM–7PM</div>
         </div>
       </div>
     </div>`;

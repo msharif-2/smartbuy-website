@@ -10,59 +10,79 @@
 </head>
 <body>
 
+  <!-- Icon sprite -->
+  <div aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+    <svg xmlns="http://www.w3.org/2000/svg"><defs>
+      <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+      <symbol id="i-truck" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+      <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+      <symbol id="i-star" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></symbol>
+      <symbol id="i-tag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></symbol>
+      <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7l1-4h16l1 4M3 7v13a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V7M3 7h18M8 21v-8h8v8"/></symbol>
+      <symbol id="i-dollar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></symbol>
+      <symbol id="i-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></symbol>
+      <symbol id="i-info" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></symbol>
+    </defs></svg>
+  </div>
+
+
   <!-- ── Top Info Bar ── -->
   <div class="topbar">
     <div class="container">
       <div class="topbar-left">
-        <span class="topbar-item">📍 137 Central Ave, Albany NY 12206</span>
-        <span class="topbar-item topbar-hours">🕐 Open 7 Days · 10AM–7PM</span>
+        <span class="topbar-item"><svg class="icon"><use href="#i-pin"/></svg> 137 Central Ave, Albany NY 12206</span>
+        <span class="topbar-item topbar-hours"><svg class="icon"><use href="#i-clock"/></svg> Open 7 Days · 10AM–7PM</span>
       </div>
       <div class="topbar-right">
-        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item">✉ 518smartbuyappliances@gmail.com</a>
-        <a href="tel:5185990070" class="topbar-phone">📞 (518) 599-0070</a>
+        <a href="mailto:518smartbuyappliances@gmail.com" class="topbar-item"><svg class="icon"><use href="#i-mail"/></svg> 518smartbuyappliances@gmail.com</a>
+        <a href="tel:5185990070" class="topbar-phone"><svg class="icon"><use href="#i-phone"/></svg> (518) 599-0070</a>
       </div>
     </div>
   </div>
 
   <!-- ── Main Navbar ── -->
-  <nav class="navbar" style="position:sticky;top:0;z-index:1000;">
+  <nav class="navbar" id="mainNav" style="position:sticky;top:0;z-index:1000;">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <img src="logo.png" alt="SmartBuy Albany" />
       </a>
       <div class="nav-search">
         <input type="text" placeholder="Search appliances, furniture..." />
-        <button aria-label="Search">🔍</button>
+        <button aria-label="Search"><svg class="icon"><use href="#i-search"/></svg></button>
       </div>
       <div class="nav-right">
         <div class="nav-phone">
-          <span class="nav-phone-icon">📞</span>
+          <span class="nav-phone-icon"></span>
           <div>
             <span>Call to Order</span>
             <strong>(518) 599-0070</strong>
           </div>
         </div>
-        <a href="tel:5185990070" class="nav-cta-btn">📞 Call Now</a>
+        <a href="tel:5185990070" class="nav-cta-btn"><svg class="icon"><use href="#i-phone"/></svg> Call Now</a>
       </div>
       <div class="nav-toggle" onclick="toggleMobileNav()">
         <span></span><span></span><span></span>
       </div>
     </div>
     <div class="mobile-nav" id="mobileNav">
-      <a href="index.html">🏠 Home</a>
-      <a href="shop.html">🛒 Shop All</a>
-      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
-      <a href="shop.html?cat=freezers">❄️ Freezers</a>
-      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
-      <a href="shop.html?cat=washers-dryers-combos">🔄 Washer-Dryer Combos</a>
-      <a href="shop.html?cat=washers">👕 Washers</a>
-      <a href="shop.html?cat=dryers">💨 Dryers</a>
-      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
-      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
-      <a href="shop.html?cat=scratch-dent" class="red-link">🏷️ Scratch &amp; Dent</a>
-      <a href="delivery.html">🚚 Delivery</a>
-      <a href="about.html">ℹ️ About</a>
-      <a href="contact.html">📞 Contact</a>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop All</a>
+      <a href="shop.html?cat=refrigerators">Refrigerators</a>
+      <a href="shop.html?cat=freezers">Freezers</a>
+      <a href="shop.html?cat=stoves">Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">Washer-Dryer Combos</a>
+      <a href="shop.html?cat=washers">Washers</a>
+      <a href="shop.html?cat=dryers">Dryers</a>
+      <a href="shop.html?cat=dishwashers">Dishwashers</a>
+      <a href="shop.html?cat=furniture">Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="red-link">Scratch &amp; Dent</a>
+      <a href="delivery.html"><svg class="icon"><use href="#i-truck"/></svg> Delivery</a>
+      <a href="about.html">About</a>
+      <a href="contact.html"><svg class="icon"><use href="#i-phone"/></svg> Contact</a>
     </div>
   </nav>
 
@@ -70,18 +90,18 @@
   <div class="cat-nav">
     <div class="container">
       <a href="shop.html">Shop All</a>
-      <a href="shop.html?cat=featured">⭐ Featured</a>
-      <a href="shop.html?cat=top-sellers">🔥 Top Sellers</a>
-      <a href="shop.html?cat=refrigerators">🧊 Refrigerators</a>
-      <a href="shop.html?cat=freezers">❄️ Freezers</a>
-      <a href="shop.html?cat=stoves">🍳 Stoves &amp; Ranges</a>
-      <a href="shop.html?cat=washers-dryers-combos">🔄 Combos</a>
-      <a href="shop.html?cat=washers">👕 Washers</a>
-      <a href="shop.html?cat=dryers">💨 Dryers</a>
-      <a href="shop.html?cat=dishwashers">🍽️ Dishwashers</a>
-      <a href="shop.html?cat=furniture">🛋️ Furniture</a>
-      <a href="shop.html?cat=scratch-dent" class="sd-link">🏷️ Scratch &amp; Dent</a>
-      <a href="delivery.html">🚚 Delivery</a>
+      <a href="shop.html?cat=featured">Featured</a>
+      <a href="shop.html?cat=top-sellers">Top Sellers</a>
+      <a href="shop.html?cat=refrigerators">Refrigerators</a>
+      <a href="shop.html?cat=freezers">Freezers</a>
+      <a href="shop.html?cat=stoves">Stoves &amp; Ranges</a>
+      <a href="shop.html?cat=washers-dryers-combos">Combos</a>
+      <a href="shop.html?cat=washers">Washers</a>
+      <a href="shop.html?cat=dryers">Dryers</a>
+      <a href="shop.html?cat=dishwashers">Dishwashers</a>
+      <a href="shop.html?cat=furniture">Furniture</a>
+      <a href="shop.html?cat=scratch-dent" class="sd-link">Scratch &amp; Dent</a>
+      <a href="delivery.html"><svg class="icon"><use href="#i-truck"/></svg> Delivery</a>
     </div>
   </div>
 
@@ -155,22 +175,22 @@
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;">
         <div style="background:var(--navy);color:#fff;border-radius:var(--radius);padding:32px 24px;text-align:center;">
-          <div style="font-size:2rem;margin-bottom:12px;">💸</div>
+          <div style="font-size:2rem;margin-bottom:12px;"></div>
           <h3 style="color:#fff;font-size:1rem;margin-bottom:8px;">Honest Pricing</h3>
           <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);">No hidden fees. No bait-and-switch. Just real outlet prices you can count on.</p>
         </div>
         <div style="background:var(--navy);color:#fff;border-radius:var(--radius);padding:32px 24px;text-align:center;">
-          <div style="font-size:2rem;margin-bottom:12px;">🏘️</div>
+          <div style="font-size:2rem;margin-bottom:12px;"></div>
           <h3 style="color:#fff;font-size:1rem;margin-bottom:8px;">Community First</h3>
           <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);">We're an Albany business serving Albany people. Our neighbors are our customers.</p>
         </div>
         <div style="background:var(--navy);color:#fff;border-radius:var(--radius);padding:32px 24px;text-align:center;">
-          <div style="font-size:2rem;margin-bottom:12px;">📦</div>
+          <div style="font-size:2rem;margin-bottom:12px;"></div>
           <h3 style="color:#fff;font-size:1rem;margin-bottom:8px;">Quality Goods</h3>
           <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);">Every item we sell is carefully selected and checked before it hits the floor.</p>
         </div>
         <div style="background:var(--navy);color:#fff;border-radius:var(--radius);padding:32px 24px;text-align:center;">
-          <div style="font-size:2rem;margin-bottom:12px;">🙌</div>
+          <div style="font-size:2rem;margin-bottom:12px;"></div>
           <h3 style="color:#fff;font-size:1rem;margin-bottom:8px;">Real Service</h3>
           <p style="font-size:0.84rem;color:rgba(255,255,255,0.65);">We pick up the phone, answer questions, and go the extra mile for every customer.</p>
         </div>
@@ -184,7 +204,7 @@
       <h2>Come See Us in Albany</h2>
       <p>Stop by our showroom at 137 Central Ave or give us a call. We'd love to help you find exactly what you need.</p>
       <div class="cta-btns">
-        <a href="tel:5185990070" class="btn-outline-dark">📞 (518) 599-0070</a>
+        <a href="tel:5185990070" class="btn-outline-dark"><svg class="icon"><use href="#i-phone"/></svg> (518) 599-0070</a>
         <a href="shop.html" class="btn-primary">Shop Products</a>
       </div>
     </div>
@@ -222,10 +242,10 @@
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
-          <div class="footer-detail">📍 <span>137 Central Ave<br>Albany, NY 12206</span></div>
-          <div class="footer-detail">📞 <a href="tel:5185990070">(518) 599-0070</a></div>
-          <div class="footer-detail">✉️ <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
-          <div class="footer-detail">🕐 <span>Mon–Sun: 10AM–7PM</span></div>
+          <div class="footer-detail"><svg class="icon"><use href="#i-pin"/></svg> <span>137 Central Ave<br>Albany, NY 12206</span></div>
+          <div class="footer-detail"><svg class="icon"><use href="#i-phone"/></svg> <a href="tel:5185990070">(518) 599-0070</a></div>
+          <div class="footer-detail"><svg class="icon"><use href="#i-mail"/></svg> <a href="mailto:518smartbuyappliances@gmail.com">518smartbuyappliances@gmail.com</a></div>
+          <div class="footer-detail"><svg class="icon"><use href="#i-clock"/></svg> <span>Mon–Sun: 10AM–7PM</span></div>
         </div>
       </div>
       <div class="footer-bar">
