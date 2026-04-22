@@ -60,32 +60,38 @@ let PRODUCTS = [
   { id:37, name:"LG Front Load Washer (Scratch & Dent)", brand:"LG", sku:"SD-WM1455HWA", price:299, was:1099, image:"/images/products/WM1455HWA.jpg", categories:["scratch-dent"], badge:"scratch-dent", description:"Cosmetic blemish on lid. Smart wi-fi and Built-In Intelligence features all working." }
 ];
 
-const CATEGORIES = [
-  { slug:"featured",              label:"Featured",            icon:"⭐", color:"#f59e0b", image:"/images/products/A4L-Bristol-24-800x800.jpg" },
-  { slug:"top-sellers",           label:"Top Sellers",         icon:"🔥", color:"#ef4444", image:"/images/products/LFXS26973D.jpg" },
-  { slug:"refrigerators",         label:"Refrigerators",       icon:"🧊", color:"#3b82f6", image:"/images/products/refrigerators-category.jpg" },
-  { slug:"freezers",              label:"Freezers",            icon:"❄️", color:"#06b6d4", image:"/images/products/freezers-category.jpg" },
-  { slug:"stoves",                label:"Stoves & Ranges",     icon:"🍳", color:"#f59e0b", image:"/images/products/stoves-category.jpg" },
-  { slug:"washers-dryers-combos", label:"Washer-Dryer Combos", icon:"🔄", color:"#8b5cf6", image:"/images/products/washer-dryer-combos-category.jpg" },
-  { slug:"washers",               label:"Washers",             icon:"👕", color:"#6366f1", image:"/images/products/washers-category.jpg" },
-  { slug:"dryers",                label:"Dryers",              icon:"💨", color:"#7c3aed", image:"/images/products/dryers-category.jpg" },
-  { slug:"dishwashers",           label:"Dishwashers",         icon:"🍽️", color:"#10b981", image:"/images/products/dishwashers-category.jpg" },
-  { slug:"furniture",             label:"Furniture",           icon:"🛋️", color:"#6366f1", image:"https://placehold.co/500x500/ede9fe/2e1a5e?text=Furniture" },
-  { slug:"scratch-dent",          label:"Scratch & Dent",      icon:"🏷️", color:"#CC1100", image:"/images/products/8c16bdc5.jpg" },
-  { slug:"washers-dryers",        label:"Washers & Dryers",    icon:"👕", color:"#8b5cf6", image:"/images/products/washers-category.jpg", hidden:true }
+let CATEGORIES = [
+  { slug:"featured",              label:"Featured",            icon:"⭐", color:"#f59e0b", image:"/images/products/LFXS26973D.jpg" },
+  { slug:"top-sellers",           label:"Top Sellers",         icon:"🔥", color:"#ef4444", image:"/images/products/LRFDC2406S.jpg" },
+  { slug:"refrigerators",         label:"Refrigerators",       icon:"🧊", color:"#3b82f6", image:"/images/products/LFXS26973D.jpg" },
+  { slug:"freezers",              label:"Freezers",            icon:"❄️", color:"#06b6d4", image:"/images/products/LRTLS2403S.jpg" },
+  { slug:"stoves",                label:"Stoves & Ranges",     icon:"🍳", color:"#f59e0b", image:"/images/products/LSG4511ST-2-430x573.jpg" },
+  { slug:"washers-dryers-combos", label:"Washer-Dryer Combos", icon:"🔄", color:"#8b5cf6", image:"/images/products/LG_STUDIO_WashTower_Styler11-scaled.jpg" },
+  { slug:"washers",               label:"Washers",             icon:"👕", color:"#6366f1", image:"/images/products/WM1455HWA.jpg" },
+  { slug:"dryers",                label:"Dryers",              icon:"💨", color:"#7c3aed", image:"/images/products/DLEX4000W.jpg" },
+  { slug:"dishwashers",           label:"Dishwashers",         icon:"🍽️", color:"#10b981", image:"/images/products/LDFN3432T.jpg" },
+  { slug:"furniture",             label:"Furniture",           icon:"🛋️", color:"#6366f1", image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" },
+  { slug:"scratch-dent",          label:"Scratch & Dent",      icon:"🏷️", color:"#C8102E", image:"/images/products/LDE4413ST-430x537.jpg" },
+  { slug:"washers-dryers",        label:"Washers & Dryers",    icon:"👕", color:"#8b5cf6", image:"/images/products/WM1455HWA.jpg", hidden:true }
 ];
 
-// ── Load from products.json when hosted (silently falls back to inline data if local) ──
+// ── Load from products.json & categories.json when hosted (silently falls back to inline data if local) ──
 async function loadCatalog() {
+  if (window.location.protocol === 'file:') return; // running locally — use inline data
   try {
-    if (window.location.protocol === 'file:') return; // running locally — use inline data
     const res = await fetch('products.json');
-    if (!res.ok) return;
-    const data = await res.json();
-    if (data.products && data.products.length > 0) PRODUCTS = data.products;
-  } catch(e) {
-    // fetch failed — inline data already loaded above, nothing to do
-  }
+    if (res.ok) {
+      const data = await res.json();
+      if (data.products && data.products.length > 0) PRODUCTS = data.products;
+    }
+  } catch(e) { /* inline fallback */ }
+  try {
+    const res = await fetch('categories.json');
+    if (res.ok) {
+      const data = await res.json();
+      if (data.categories && data.categories.length > 0) CATEGORIES = data.categories;
+    }
+  } catch(e) { /* inline fallback */ }
 }
 
 // ── Helpers ──

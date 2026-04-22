@@ -96,3 +96,42 @@ collections:
                     value: "furniture"
                   - label: "🏷️ Scratch & Dent"
                     value: "scratch-dent"
+
+  - name: "categories"
+    label: "Categories"
+    files:
+      - name: "catlist"
+        label: "All Categories"
+        file: "categories.json"
+        format: "json"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.label}} ({{fields.slug}})"
+            fields:
+              - label: "Slug (URL-safe, no spaces — e.g. 'refrigerators')"
+                name: "slug"
+                widget: "string"
+                hint: "Lowercase, hyphens only. This is used in URLs like shop.html?cat=refrigerators"
+              - label: "Display Label"
+                name: "label"
+                widget: "string"
+              - label: "Icon (emoji, optional)"
+                name: "icon"
+                widget: "string"
+                required: false
+              - label: "Accent Color (hex, optional)"
+                name: "color"
+                widget: "string"
+                required: false
+                default: "#0B2545"
+              - label: "Image URL"
+                name: "image"
+                widget: "string"
+                hint: "Paste image URL or /images/products/filename.jpg"
+              - label: "Hide from main nav"
+                name: "hidden"
+                widget: "boolean"
+                required: false
+                default: false

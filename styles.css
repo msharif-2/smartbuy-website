@@ -1787,6 +1787,41 @@ button:active, .btn-hero-primary:active, .btn-addcart:active, .promo-btn:active,
 .cat-card:hover { border-color: var(--navy); }
 .cat-nav { border-bottom: 2px solid var(--navy-mid); }
 .filter-option:hover { color: var(--navy); }
+
+/* ── Scratch & Dent disclaimer strip ── */
+.disclaimer-strip {
+  background: #fff8e6;
+  border-top: 1px solid #f4d06a;
+  border-bottom: 1px solid #f4d06a;
+  padding: 20px 0;
+}
+.disclaimer-strip .container {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  max-width: 1100px;
+}
+.disclaimer-icon {
+  flex: 0 0 auto;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: #fde68a;
+  color: #7c4a03;
+  display: flex; align-items: center; justify-content: center;
+}
+.disclaimer-icon .icon { width: 20px; height: 20px; }
+.disclaimer-text {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #5a3d05;
+}
+.disclaimer-text strong { color: #3d2a04; font-weight: 600; }
+.disclaimer-text a { color: var(--navy); font-weight: 600; text-decoration: underline; }
+@media (max-width: 600px) {
+  .disclaimer-strip { padding: 16px 0; }
+  .disclaimer-text { font-size: 0.88rem; }
+  .disclaimer-icon { width: 32px; height: 32px; }
+}
 .filter-option input[type="checkbox"] { accent-color: var(--navy); }
 .filter-tag button:hover { color: var(--navy); }
 .breadcrumb a { color: var(--gray-500); }
