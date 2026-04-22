@@ -382,8 +382,11 @@
 
       let results = [...PRODUCTS];
 
-      // Category
-      if (activeCat) results = results.filter(p => p.categories.includes(activeCat));
+      // Category (uses helper so pseudo-categories like 'appliances' work)
+      if (activeCat) {
+        const catSet = new Set(getProductsByCategory(activeCat).map(p => p.id));
+        results = results.filter(p => catSet.has(p.id));
+      }
 
       // Brand
       if (activeBrands.size > 0) results = results.filter(p => activeBrands.has(p.brand));
