@@ -10,6 +10,7 @@
     { "slug": "dryers", "label": "Dryers", "icon": "💨", "color": "#7c3aed", "image": "/images/products/DLEX4000W.jpg", "hidden": false },
     { "slug": "dishwashers", "label": "Dishwashers", "icon": "🍽️", "color": "#10b981", "image": "/images/products/LDFN3432T.jpg", "hidden": false },
     { "slug": "furniture", "label": "Furniture", "icon": "🛋️", "color": "#6366f1", "image": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80", "hidden": false },
-    { "slug": "scratch-dent", "label": "Scratch & Dent", "icon": "🏷️", "color": "#C8102E", "image": "/images/products/LDE4413ST-430x537.jpg", "hidden": false }
+    { "slug": "scratch-dent", "label": "Scratch & Dent", "icon": "🏷️", "color": "#C8102E", "image": "/images/products/LDE4413ST-430x537.jpg", "hidden": true },
+    { "slug": "appliances", "label": "Appliances", "icon": "🏠", "color": "#0B2545", "image": "/images/products/LFXS26973D.jpg", "hidden": true }
   ]
 }

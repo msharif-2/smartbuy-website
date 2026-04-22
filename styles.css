@@ -1788,6 +1788,25 @@ button:active, .btn-hero-primary:active, .btn-addcart:active, .promo-btn:active,
 .cat-nav { border-bottom: 2px solid var(--navy-mid); }
 .filter-option:hover { color: var(--navy); }
 
+/* ── Topbar utility links (About/Contact/Delivery on desktop) ── */
+.topbar-link {
+  position: relative;
+  padding: 0 2px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+.topbar-link:not(:last-of-type)::after {
+  content: '';
+  display: inline-block;
+  width: 1px; height: 10px;
+  background: rgba(255,255,255,0.25);
+  margin-left: 12px;
+  vertical-align: middle;
+}
+@media (max-width: 900px) {
+  .topbar-link { display: none; }
+}
+
 /* ── Scratch & Dent disclaimer strip ── */
 .disclaimer-strip {
   background: #fff8e6;

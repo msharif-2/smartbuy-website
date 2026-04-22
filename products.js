@@ -71,8 +71,9 @@ let CATEGORIES = [
   { slug:"dryers",                label:"Dryers",              icon:"💨", color:"#7c3aed", image:"/images/products/DLEX4000W.jpg" },
   { slug:"dishwashers",           label:"Dishwashers",         icon:"🍽️", color:"#10b981", image:"/images/products/LDFN3432T.jpg" },
   { slug:"furniture",             label:"Furniture",           icon:"🛋️", color:"#6366f1", image:"https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80" },
-  { slug:"scratch-dent",          label:"Scratch & Dent",      icon:"🏷️", color:"#C8102E", image:"/images/products/LDE4413ST-430x537.jpg" },
-  { slug:"washers-dryers",        label:"Washers & Dryers",    icon:"👕", color:"#8b5cf6", image:"/images/products/WM1455HWA.jpg", hidden:true }
+  { slug:"scratch-dent",          label:"Scratch & Dent",      icon:"🏷️", color:"#C8102E", image:"/images/products/LDE4413ST-430x537.jpg", hidden:true },
+  { slug:"washers-dryers",        label:"Washers & Dryers",    icon:"👕", color:"#8b5cf6", image:"/images/products/WM1455HWA.jpg", hidden:true },
+  { slug:"appliances",            label:"Appliances",          icon:"🏠", color:"#0B2545", image:"/images/products/LFXS26973D.jpg", hidden:true }
 ];
 
 // ── Load from products.json & categories.json when hosted (silently falls back to inline data if local) ──
@@ -97,6 +98,8 @@ async function loadCatalog() {
 // ── Helpers ──
 function getProductsByCategory(slug) {
   if (!slug) return PRODUCTS;
+  // Pseudo-category "appliances" = everything except furniture
+  if (slug === 'appliances') return PRODUCTS.filter(p => !p.categories.includes('furniture'));
   return PRODUCTS.filter(p => p.categories.includes(slug));
 }
 
